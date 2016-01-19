@@ -1,0 +1,88 @@
+﻿
+Algorithm Analysis
+Best Case Analysis
+The best case of insertion sort occurs when array is sorted.Insertion sort is the most effective algorithm when array is sorted.As shown below, when array is sorted.Insertion sort algorithm takes short time.
+Mergesort and quicksort algorithms are same for best case.Both of them are O(nlogn).We can not analyze this case because it is difficult to preapare inputs for best case.
+The best case of quicksort occurs when the pivot we pick happens to divide the array into two exactly equal parts, in every step. Thus we have k = n/2 and n − k = n/2 for the original array of size n.
+
+
+Average Case Analysis
+Random(uniform distribution) arrays is average case for all algorithms.If array is fully random,insertion sort is not effective but quicksort  and mergesort algorithms are effective.Both of them are O(nlogn).Insertion sort is O(n2).As shown below,quicksort and mergesort algortihms are better than insertion sort.
+
+
+Worst Case Analysis
+Insertion sort is the worst input which array are descending(reverse sorted) order.As shown below insertion takes long time for sort array.
+Sorted(pre-sorted) array is the worst case of quicksort algorithm because while one array is 0 the other array is n-1 size.Then it happens O(n2).As shown below if array is fully sorted.This algorithm is not effective.
+In the worst case ,mergesort is the best algorithm.It takes short time for sort list and O(nlogn).
+
+
+Reverse Sorted
+The elements in the array are descending order.For example, if array has 100 elements,then first element of the array is array[0]=100 and last element of the array is array[99]=1 
+N(Input Size)	Insertion Sort(Time)	MergeSort(Time)	QuickSort(Median of Three)(Time) 	QuickSort(First Element Pivot)(Time)
+10	6 316ns	13 027ns	12 632ns	10422ns
+100	146 054ns	133 659ns	53 685ns	44192ns
+1000	15ms	1 167 641ns	674 216ns	560673ns
+10 000	172ms	16ms	3 735 264ns	2252579ns
+100 000	15 907ms	32ms	16ms	16ms
+1 000 000		125ms	63ms	47ms
+10 000 000		1 078ms	563ms	375ms
+100 000 000		11 501ms	6391ms	3891ms
+
+
+Uniform Distribution(Random)
+Array elements are random variables from 0 to N.
+We can experiments many times and some of results shown below.
+
+N	Insertion Sort(Time)	MergeSort(Time)	QuickSort(Median of Three)(Time)	QuickSort(First Element Pivot)(Time)
+10	3947-8290ns	20132-41257ns	18553-31580ns	15790-25613ns
+100	62764-83290ns	193457-306925ns	160738-242146ns	136612-245213ns
+1000	0-16ms	993685-1485801ns	642637-985271ns	484138-762923ns
+10 000	31-47ms	0-16ms	0-15ms	0-16ms
+100 000	3860-4047ms	31-47ms	16-31ms	16-32ms
+1 000 000		219-234ms	125-141ms	79-125ms
+10 000 000		2203-2419ms	1362-1453ms	907-969ms
+100 000 000		23798-25012ms	15 611-16485ms	10 126ms
+
+
+
+
+
+
+Nearly Sorted
+N/100 elements are changed by random variables betweeen 0-N.
+N	Insertion Sort(Time)	MergeSort(Time)	QuickSort(Median of Three)(Time)	QuickSort(First Element Pivot)(Time)
+10	5527ns	20 526ns	11 842ns	7 894ns
+100	10 658ns	141 711ns	53 927ns	34 737ns
+1000	147 238ns	1 179 089ns	630 794ns	393 554ns
+10 000	0-16ms	16ms	3 231 737ns	1 686 725ns
+100 000	47-63ms	32ms	16ms	16ms
+1 000 000	5313-5642ms	125ms	62ms	31ms
+10 000 000			563ms	250ms
+100 000 000				2 672ms
+
+
+
+Pre-Sorted
+If array is completely sorted.
+
+N	Insertion Sort(Time)	MergeSort(Time)	QuickSort(Median of Three)(Time)	QuickSort(First Element Pivot)(Time)
+10	3 158ns	12 632ns	12 237ns	8289
+100	9 868ns	130 691ns	48 158ns	27 237ns
+1000	39 889ns	1 201 147ns	541 583ns	328 423ns
+10 000	493 820ms	16ms	2 744 627ns	1 506 328ns
+100 000	3 581 428ms	32ms	16ms	16ms
+1 000 000	16ms	140ms	47ms	31ms
+10 000 000	31ms		390ms	219ms
+100 000 000	203ms			2 489ms
+
+Conclusion: Insertionsort is the best algorithm for sorted arrays regardless of input size.Quicksort median of three makes better pivot selection than quicksort first element pivot.If we look at the values in tables ,we will see that algorithm is better.Quicksort works better than mergesort for all cases as shown above.However, in the worst case, merge sort does about 39% fewer comparisons than quicksort does in the average case. In terms of moves, merge sort's worst case complexity is O(n log n)—the same complexity as quicksort's best case, and merge sort's best case takes about half as many iterations as the worst case
+
+
+	Worst Case	Average Case	Best Case
+Insertion Sort	O(n2)	O(n2)	O(n)
+Merge Sort	O(nlogn)	O(nlogn)	O(nlogn)
+Quicksort	O(n2)	O(nlogn)	O(nlogn)
+
+
+
+
